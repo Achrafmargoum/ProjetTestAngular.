@@ -1,0 +1,16 @@
+<div class="container">
+    <h1 class="text-center mt-5 text-light">Hero APP</h1>
+        <div class="row mt-4">
+            <div class="col-3">
+                <input type="text"  [(ngModel)]="hero.name" class="from-control m-1" placeholder="Name">
+            </div>
+            <div class="col-3">
+                <input type="text" [(ngModel)]="hero.power"  class="from-control m-1" placeholder="pawor">
+            </div>
+            <div class="col-3">
+                <input type="text" [(ngModel)]="hero.image"  class="from-control m-1" placeholder="image url">
+            </div>
+            <div class="col-3">
+                <button (click)="update()"  class="btn from-control m-1 text-light" ngClass="bg-cerss"> create</button>
+            </div>
+</div>

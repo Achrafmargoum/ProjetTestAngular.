@@ -1,0 +1,26 @@
+<div class="row m-5">
+
+    <div class="col-3" *ngFor="let item of heros"  > 
+
+         <div class="card mt-1" >
+            <div class="card-image">
+                
+                <img [src]="'http://localhost:3000/getimage/' + item.image" alt="" width="100%">
+            </div>
+             <div class="card-body" [ngClass]="{'card p-1':true,'bg-love':item.power>20 , 'bg-danger':item.pawor > 100,'bg-cerss':item.pawor<20 , }" >
+                <h2>{{item.name}}</h2>
+                <p>{{item.power}}</p>
+             </div> 
+             <div>
+
+
+                <button class="btn btn-success"[routerLink]="['/modifier', item._id]" >modifier</button>     
+             <div class="btn btn-danger"  (click)="delete(item._id)">delete</div>     
+
+             </div> 
+             
+
+        </div>
+
+    </div>
+</div>
